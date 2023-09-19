@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 gpio_state = 0
 
-@app.route('/set_gpio', methods=['POST'])
+@app.route('/set_gpio', methods=['GET'])
 def set_gpio():
     global gpio_state
     gpio_state = int(request.args.get('gpio_state'))
